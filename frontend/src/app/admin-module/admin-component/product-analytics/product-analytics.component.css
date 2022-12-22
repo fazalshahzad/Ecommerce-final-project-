@@ -1,6 +1,6 @@
 @import url('../dashboard/dashboard.component.css');
 .tableHead{
-   background-color: rgb(173, 16, 16);
+   background-color: #3d3425;
 }
 .btn{
     border-radius: 0%;
@@ -18,4 +18,4 @@
     border-radius: 8px;
     box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
 }
- 
+

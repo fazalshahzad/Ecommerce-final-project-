@@ -5,7 +5,7 @@
 }
 .page__box {
     min-height: 120px;
-    background: rgb(157, 11, 11);
+    background: #3d3425;
     margin: 0 -1rem;
     font-size: 36px;
 }
@@ -24,7 +24,7 @@
 
 .topclass{
     width: 91%;
-    background-color: rgb(157, 11, 11);
+    background-color: #3d3425;
     position: relative;
      z-index: 3;
     height: 10vh;

@@ -3,10 +3,10 @@ body{
 }
 .input{
     width: 100%;
-    border-radius: 0%; 
+    border-radius: 0%;
 }
 .input:focus{
-    box-shadow: none; 
+    box-shadow: none;
     border: 1px solid #681199;
 }
 label{
@@ -42,7 +42,7 @@ margin-left: 13px;
 }
 .topclass{
     width: 97%;
-    background-color: rgb(157, 11, 11);
+    background-color: #3d3425;
     position: relative;
      z-index: 3;
     height: 7vh;
@@ -71,9 +71,9 @@ margin-left: 13px;
     border-radius: 0px;
     border: none;
     box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
-    padding-top: 90px impotant; 
+    padding-top: 90px impotant;
     margin-top: -40px;
-   
+
 }
 .formBox2>h5{
     display: flex;

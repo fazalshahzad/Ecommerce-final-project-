@@ -806,16 +806,20 @@ position: relative;
 }
 
 #product1 .pro .des i{
-  font-size: 12px;
-  color: rgba(243,181,25);
+  font-size: 14px;
+  color: black;
 
+}
+#cart{
+padding-left: 55px;
+color: #088178;
 }
 
 #product1 .pro .des h4{
-  padding-top: 7px;
+  padding-top: 17px;
   font-size: 15px;
   font-weight: 700;
-  color: #088178;
+  color: black;
 }
 
 #product1  .pro .cart{
@@ -831,4 +835,14 @@ position: relative;
   bottom: 20px;
   right: 10px;
 }
+
+
+
+
+
+
+
+
+
+
 

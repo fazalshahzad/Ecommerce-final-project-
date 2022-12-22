@@ -23,7 +23,7 @@ app-admin-sidebar{
     width: 57px;
     height: 100vh;
     /* box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5); */
-    background-color: rgb(157, 11, 11);
+    background-color: #3d3425;
     overflow-x: hidden;
     white-space: nowrap;
     transition: width 250ms ease-in;
