@@ -18,6 +18,7 @@ import { ViewProductComponent } from './main-component/view-product/view-product
 import { HomeComponent } from './main-component/home/home.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { BlogComponent } from './main-component/blog/blog.component';
+import { CartComponent } from './main-component/cart/cart.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { BlogComponent } from './main-component/blog/blog.component';
     WildCartComponent,
     ViewProductComponent,
     BlogComponent,
+    CartComponent,
    
   ],
   imports: [
