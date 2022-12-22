@@ -17,6 +17,7 @@ import { WildCartComponent } from './main-component/wild-cart/wild-cart.componen
 import { ViewProductComponent } from './main-component/view-product/view-product.component';
 import { HomeComponent } from './main-component/home/home.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { BlogComponent } from './main-component/blog/blog.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     FooterComponent,
     WildCartComponent,
     ViewProductComponent,
+    BlogComponent,
    
   ],
   imports: [
