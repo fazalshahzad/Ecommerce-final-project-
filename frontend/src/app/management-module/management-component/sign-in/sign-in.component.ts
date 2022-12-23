@@ -18,12 +18,12 @@ export class SignInComponent implements OnInit {
     private readonly toaster:ToastrService,
     private readonly loginApi:LoginRegisterService,
     private readonly router:Router
-    ) { 
+    ) {
     this.Form()
   }
 
   ngOnInit(): void {
-    
+
   }
   toogle(){
 this.hide=!this.hide
@@ -37,7 +37,7 @@ this.hide=!this.hide
     })
   }
   SubmitLoginForm(){
-let submitFormResult = this.LoginForm.value
+let submitFormResult = this.LoginForm.value;
 this.loginApi.CreateLoginForm(submitFormResult).subscribe((res:any)=>{
   this.toaster.info(res.Message)
 
@@ -50,10 +50,10 @@ this.loginApi.CreateLoginForm(submitFormResult).subscribe((res:any)=>{
   }
   // ***************************** 🚗🚗🚗 ***************************//
 
-  this.LoginForm.reset()
-  this.LoginForm.password.length = 0
- 
-}) 
+  this.LoginForm.reset();
+  this.LoginForm.password.length = 0;
+
+})
   }
 
 }
