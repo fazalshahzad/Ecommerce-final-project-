@@ -1,7 +1,8 @@
+import { ProductInterface } from './../../../shared-service/productInterface/product';
 import { Component, OnInit } from '@angular/core';
-import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
-import { ProductInterface } from 'src/app/shared-service/productInterface/product';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
+
 
 
 @Component({

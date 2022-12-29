@@ -4,12 +4,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
 
 
+
 @Component({
   selector: 'app-view-product',
   templateUrl: './view-product.component.html',
   styleUrls: ['./view-product.component.css']
 })
 export class ViewProductComponent implements OnInit {
+  public selectedQuantity:Number | any = 0;
+  public stockQuantity:any;
   public imageIndex = "ProductImageUrl"
   public url = 'http://localhost:8686/'
   public getProductsId: any;
