@@ -1,3 +1,32 @@
+
+
+/* ************************* fontawesome */
+.fa-cart-shopping{
+    margin-left: 94px;
+    font-size: 21px;
+    cursor: pointer;
+}
+.fa-cart-shopping:hover{
+
+    color: #fff !important;
+    text-shadow:
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	;
+
+      -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+
+
+
+
 #hero{
   background-image: url("../../../../assets/img/banner/b1.jpg");
   height: 40vh;
@@ -167,8 +196,7 @@ position: relative;
 }
 
 #product1 .pro .des i{
-  font-size: 12px;
-  color: rgba(243,181,25);
+  font-size: 14px;
 
 }
 
@@ -510,3 +538,13 @@ background-color: #041e42;
 
 
 
+
+
+
+
+
+
+#cart{
+  padding-left: 55px;
+  color: #088178;
+  }
