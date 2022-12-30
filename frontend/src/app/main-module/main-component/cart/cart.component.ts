@@ -2,6 +2,7 @@ import { ProductInterface } from './../../../shared-service/productInterface/pro
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
+import * as AOS from 'aos';
 
 
 
@@ -44,8 +45,8 @@ export class CartComponent implements OnInit {
     })
   }
 
-  public reDirectSingleProductPage(_id: any) {
-    this.Router.navigate(['View-Product',_id]);
+  public reDirectToCartPage(_id: any) {
+    this.Router.navigate(['cart',_id]);
   }
 
 

@@ -21,7 +21,10 @@ export class ViewProductComponent implements OnInit {
 
   constructor(private ActivatedRoute: ActivatedRoute,
     private readonly getAllProductFrombackend: ProductApiService,
-    private readonly Router:Router
+    private readonly Router:Router,
+    private getProductDatafromservice: ProductApiService,
+
+
     ) { }
 
   ngOnInit(): void {
@@ -29,6 +32,7 @@ export class ViewProductComponent implements OnInit {
     this.getProductService()
     this.getAllProduct()
   }
+
 
   public callingMyActivatedRoute() {
     this.getProductsId = this.ActivatedRoute.snapshot.params['Id']
@@ -46,10 +50,26 @@ export class ViewProductComponent implements OnInit {
     })
   }
 
-  public reDirectSingleProductPage(_id: any) {
-    this.Router.navigate(['View-Product',_id]);
+  public reDirectToCartPage(_id: any) {
+    this.Router.navigate(['cart',_id]);
   }
 
+  public incrementQuantity() {
+    if (this.selectedQuantity < this.stockQuantity) {
+
+      this.selectedQuantity == this.stockQuantity;
+    }
+      return this.selectedQuantity++;
+
+  }
+
+
+public decrementQuantity() {
+  if (this.selectedQuantity > 0) {
+
+  }
+  return this.selectedQuantity--;
+  }
 
 
 

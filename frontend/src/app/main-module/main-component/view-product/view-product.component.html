@@ -22,9 +22,9 @@
         </div> -->
         <div class="col-md-4 my-3">
             <div class="gallery" *ngFor="let images of getAllDataWithOwnId?.ProductImages">
-                <input type="radio" checked="checked" name="select" [id]="url+images._id">
-                <label class="inline" [for]="url+images._id"
-                    [ngStyle]="{ 'background-image': 'url(' + url+images.ProductImageUrl + ')'}"></label>
+                <input type="radio" checked="checked" name="select" >
+                <label class="inline"
+                    ></label>
                 <img [src]="url+images.ProductImageUrl">
 
 
@@ -63,11 +63,12 @@
 
 
                     <div class="quantity-wrapper1 my-2">
-                        <span>-</span>
-                        0
-                        <span>+</span>
+                      <button (click)="decrementQuantity()">-</button>
+                      <input type="number" [value]="selectedQuantity" >
+                      <button (click)="incrementQuantity()">+</button>
+
                     </div>
-                    <button type="button" class="btn btn1 d-flex justify-content-center" routerLink="/cart">Add To Cart</button>
+                    <button type="button" class="btn btn1 d-flex justify-content-center" routerLink="/cart" > Add To Cart</button>
                 </div>
                 <hr>
                 <div class="container">
@@ -98,3 +99,5 @@
             </div>
         </div>
     </div>
+
+
