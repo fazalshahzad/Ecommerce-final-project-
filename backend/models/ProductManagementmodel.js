@@ -13,6 +13,7 @@ const ProductSchema = mongoose.Schema({
     price :{ type:Number , required:true},
     companyName:{type:String,required:true},
     color:{type:String,required:true},
+    
     size:[],
     description:{type:String,required:true},
     ProductImages:[{

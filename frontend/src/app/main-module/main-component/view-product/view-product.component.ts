@@ -33,6 +33,7 @@ export class ViewProductComponent implements OnInit {
     this.getAllProduct()
   }
 
+  
 
   public callingMyActivatedRoute() {
     this.getProductsId = this.ActivatedRoute.snapshot.params['Id']
@@ -51,8 +52,7 @@ export class ViewProductComponent implements OnInit {
   }
 
   public reDirectToCartPage(_id: any) {
-    this.Router.navigate(['cart',_id]);
-  }
+    this.Router.navigate(['cart',_id]);  }
 
   public incrementQuantity() {
     if (this.selectedQuantity < this.stockQuantity) {

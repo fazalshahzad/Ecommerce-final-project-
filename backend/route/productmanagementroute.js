@@ -11,7 +11,7 @@ const { ProductData,
       hardDeleteProductById,  //hard delete
     //   UpDateProductData,       // frontendData api
       updateProductById,
-      getDataWithCompanyName
+      getDataWithCompanyName,
 }= require("../controller/productmanagementcontroll")
 
 // Calling The Controller 4th step

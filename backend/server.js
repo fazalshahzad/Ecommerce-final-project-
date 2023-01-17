@@ -2,7 +2,7 @@ const express = require("express");// Only ImPort Express frameWork
 const cors = require("cors");
 const app = express();//All the Classes of Express FrameWork in App now you can get any class with (.) bracket is use because its a class
 const ApplicationConfig = require ('./Configration/LoadMyConfig-Env-file')
-
+const cartRouter = require('./route/cartManagementRoute');
 const ResponseOfMyDataBaseConnection = require("./Configration/DatabaseConfigration");
 const PORT = process.env.PORT||5050;
 //Block Dependencies
@@ -14,6 +14,8 @@ app.use(express.json());
 app.use(express.text());
 app.use(express.raw());
 app.use(cors());
+app.use('/cart', cartRouter);
+
 app.use('/assets',express.static('assets')); //Route in image path
 //Block Start Initialize the app
 
