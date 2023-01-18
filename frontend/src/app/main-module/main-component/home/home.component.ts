@@ -5,6 +5,10 @@ import { ProductApiService } from 'src/app/shared-service/product-api/product-ap
 import { CartService } from 'src/app/shared-service/cart-service/cart.service';
 import * as AOS from 'aos';
 import { RouterModule } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { product } from 'src/app/shared-service/Model/product';
+
 
 @Component({
   selector: 'app-home',
@@ -25,6 +29,7 @@ export class HomeComponent implements OnInit {
   Url = 'http://localhost:8686/';
 
   constructor(
+    private ActivatedRoute:ActivatedRoute,
     
     private getProductDatafromservice: ProductApiService,
     private Router: Router,
@@ -52,8 +57,11 @@ export class HomeComponent implements OnInit {
   reDirectSingleProductPage(_id: any) {
     this.Router.navigate(['View-Product', _id]);
   }
-  addToCart(product: any) {
-    this.cartService.addToCart(product);
-    this.Router.navigate(['cart']);
-    }
+ 
+
+  addToCart(){
+    this.cartService.addToCart(this.product);
+    this.Router.navigateByUrl('/cart');
+  }
+
 }
