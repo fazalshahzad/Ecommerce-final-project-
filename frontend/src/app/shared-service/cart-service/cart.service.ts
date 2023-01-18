@@ -7,27 +7,18 @@ import { HttpClient } from '@angular/common/http';
 export class CartService {
 
 
-
-  
-  private cartItems: any[] = [];
-  cartItemsFromBackend: any[] = [];
-
-  constructor(private http: HttpClient) { }
+  private cart: any[] = [];
 
   addToCart(product: any) {
-    this.cartItems.push(product);
+  this.cart.push(product);
   }
-
-
-  getCartItems(): any[] {
-    return this.cartItems;
+  
+  getCart() {
+  return this.cart;
   }
-
-  // Method to get cart items from backend
-  getCartItemsFromBackend() {
-    return this.http.get('api/cart');
+  
+  clearCart() {
+  this.cart = [];
+  return this.cart;
   }
-
-
-
-}
+  }

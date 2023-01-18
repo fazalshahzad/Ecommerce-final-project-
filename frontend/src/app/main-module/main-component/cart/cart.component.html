@@ -54,7 +54,7 @@
 
 
 
-
+<!-- 
 
 
 
@@ -98,4 +98,17 @@
 
   <a routerLink="/checkout">Proceed to Checkout</a>
 </div>
+</div> -->
+
+
+
+<div *ngFor="let product of cartProducts">
+  <div class="cart-item">
+    <div class="product-name">Product Name: {{product.productName}}</div>
+    <div class="product-description">Description: {{product.description}}</div>
+    <img class="product-image" [src]="product.image">
+    <div class="product-quantity">Quantity: {{product.quantity}}</div>
+    <div class="product-price">Price: {{product.price}}</div>
+  </div>
 </div>
+

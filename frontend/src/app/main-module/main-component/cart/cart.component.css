@@ -174,3 +174,47 @@ li .remove-button:hover{
   opacity: 1;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cart-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px #ccc;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+}
+
+.product-quantity,
+.product-price {
+  font-weight: bold;
+  color: #3c3c3c;
+}

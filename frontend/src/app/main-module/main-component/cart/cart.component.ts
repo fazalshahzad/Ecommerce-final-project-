@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
 import * as AOS from 'aos';
+import { CartService } from 'src/app/shared-service/cart-service/cart.service';
 
 
 
@@ -13,11 +14,11 @@ import * as AOS from 'aos';
 })
 export class CartComponent implements OnInit {
  
+  cartProducts: any[] = [];
 
-  constructor(
-    ) { }
-
-  ngOnInit(): void {
-    }
-
-}
+  constructor(private cartService: CartService) { }
+  
+  ngOnInit() {
+  this.cartProducts = this.cartService.getCart();
+  }
+  }
