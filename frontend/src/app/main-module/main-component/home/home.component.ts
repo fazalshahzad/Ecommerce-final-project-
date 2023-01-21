@@ -43,25 +43,17 @@ export class HomeComponent implements OnInit {
       this.ProductArray = res.Result;
       this.totalProduct = this.ProductArray.length;
     });
+
+  
   }
 
-  // Grid list view 
-  viewProduct() {
-    this.productView = true;
-  }
-  viewProduct1() {
-    this.productView = false;
-  }
+  
 
   // ReDirect on Single Product Page 
   reDirectSingleProductPage(_id: any) {
     this.Router.navigate(['View-Product', _id]);
   }
  
-  addToCart(product: any){
-    this.cartService.addToCart(product);
-    this.Router.navigateByUrl('/cart');
-  }
 
 
 }
