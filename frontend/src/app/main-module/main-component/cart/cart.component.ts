@@ -6,7 +6,6 @@ import * as AOS from 'aos';
 import { CartService } from 'src/app/shared-service/cart-service/cart.service';
 
 import { Cart } from 'src/app/shared-service/Model/cartmodel';
-import { CartItem } from 'src/app/shared-service/Model/cartitem';
 import { product } from '../../../shared-service/Model/product';
 
 
