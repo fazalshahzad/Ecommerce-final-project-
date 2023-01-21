@@ -15,4 +15,6 @@ Status:number;
 CreateDate:string;
 createdAt:string;
 updatedAt:string;
-}
+id: number;
+name: string;
+imageUrl: [];}

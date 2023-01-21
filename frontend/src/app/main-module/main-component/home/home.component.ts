@@ -55,13 +55,11 @@ export class HomeComponent implements OnInit {
   }
 
   
+  addToCart(){
+    this.cartService.addToCart(this.product);
+    this.Router.navigateByUrl('/cart');
+  }
 
-  addToCart(_id:any) {
-
-
-    this.Router.navigate(['cart', _id])
-        
-    }
 
 
 }

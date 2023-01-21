@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
 
-
 import { CartService } from 'src/app/shared-service/cart-service/cart.service';
 import { product } from 'src/app/shared-service/Model/product';
 
@@ -20,16 +19,7 @@ export class ViewProductComponent implements OnInit {
   public getProductsId: any;
   public getAllDataWithOwnId: object | ProductInterface | any = {}
   public getAllDatafromProductService: any
-  product: product = {
-    id: '',
-    name: '',
-    detail: '',
-    size: '',
-    price: 0,
-    quantity: 0,
-    imageUrl: ''
-  };
-
+  product:any;
 
   constructor(private ActivatedRoute: ActivatedRoute,
     private readonly getAllProductFrombackend: ProductApiService,
@@ -87,10 +77,9 @@ public decrementQuantity() {
 
 
   addToCart(){
-    this.product = this.getAllDataWithOwnId;
     this.cartService.addToCart(this.product);
     this.Router.navigateByUrl('/cart');
-}
+  }
 
 
 }

@@ -1,43 +1,28 @@
+<div class="container my-5">
+  <h3>Shopping Cart</h3>
 
-<div *ngIf="cart && cart.items.length" class="container">
-<ul>
-  <li *ngFor="let item of items">
-    <div>
-      <img >
+  <div class="row" *ngFor="let item of items">
+    <div class="col-md-3">
+      <img [src]="item.imageUrl" class="img-thumbnail">
     </div>
-    <div>
-      <a routerLink="/product/{{item.product.id}}">
-        {{ item.name }}
-      </a>
+    <div class="col-md-9">
+      <h4>{{item.name}}</h4>
+      <p>{{item.price}}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <button (click)="decrementQuantity(item)">-</button>
+          <span>{{item.quantity}}</span>
+          <button (click)="incrementQuantity(item)">+</button>
+        </div>
+        <div>
+          <button (click)="removeItem(item)">Remove</button>
+        </div>
+      </div>
     </div>
-    <div>
-      <select #quantitySelect
-      [value]="item.quantity"
-      (change)="changeQuantity()">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    </div>
-    <div>
-      {{ item.price | currency}}
-    </div>
-
-    <div>
-      <button class="remove-button" >
-        Remove
-      </button>
-    </div>
-  </li>
-</ul>
-<div class="checkout">
-  <div>
-    <div class="products-count">{{cart.totalCount}}</div>
-    <div class="total-price">{{cart.totalPrice|currency}}</div>
   </div>
 
-  <a routerLink="/checkout">Proceed to Checkout</a>
-</div>
+  <div class="my-5 d-flex justify-content-between align-items-center">
+    <p>Total: {{totalCost}}</p>
+    <button (click)="checkout()">Checkout</button>
+  </div>
 </div>
