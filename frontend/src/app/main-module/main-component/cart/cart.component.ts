@@ -7,6 +7,8 @@ import { CartService } from 'src/app/shared-service/cart-service/cart.service';
 
 import { Cart } from 'src/app/shared-service/Model/cartmodel';
 import { CartItem } from 'src/app/shared-service/Model/cartitem';
+import { product } from '../../../shared-service/Model/product';
+
 
 
 
@@ -16,6 +18,8 @@ import { CartItem } from 'src/app/shared-service/Model/cartitem';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  private items: product[] = [];
+
   public selectedQuantity:Number | any = 0;
   public stockQuantity:any;
   public imageIndex = "ProductImageUrl"
@@ -36,13 +40,14 @@ export class CartComponent implements OnInit {
     private getProductDatafromservice: ProductApiService,
     ) {
 
-    this.cartService.getCartObservable().subscribe((cart) => {
-      this.cart = cart;
-    })
+    
+    
 
    }
   
   ngOnInit() {
+    this.items = this.cartService.getItems();
+
     this.callingMyActivatedRoute()
     this.getProductService()
     this.getAllProduct()
@@ -65,17 +70,9 @@ export class CartComponent implements OnInit {
     })
   }
   
-  removeFromCart(cartItem:CartItem){
-    this.cartService.removeFromCart(cartItem.product.id);
-  }
-
-  changeQuantity(cartItem:CartItem,quantityInString:string){
-    const quantity = parseInt(quantityInString);
-    this.cartService.changeQuantity(cartItem.product.id, quantity);
-  }
 
 
+}
 
 
-
-  }
+  

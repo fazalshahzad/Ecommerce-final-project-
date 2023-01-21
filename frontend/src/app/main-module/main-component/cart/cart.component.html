@@ -1,19 +1,19 @@
 
 <div *ngIf="cart && cart.items.length" class="container">
 <ul>
-  <li *ngFor="let cartItem of cart.items">
+  <li *ngFor="let item of items">
     <div>
-      <img [src]="cartItem.product.imageUrl" [alt]="cartItem.product.name">
+      <img >
     </div>
     <div>
-      <a routerLink="/product/{{cartItem.product.id}}">
-        {{cartItem.product.name}}
+      <a routerLink="/product/{{item.product.id}}">
+        {{ item.name }}
       </a>
     </div>
     <div>
       <select #quantitySelect
-      [value]="cartItem.quantity"
-      (change)="changeQuantity(cartItem, quantitySelect.value)">
+      [value]="item.quantity"
+      (change)="changeQuantity()">
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -22,11 +22,11 @@
     </select>
     </div>
     <div>
-      {{cartItem.price | currency}}
+      {{ item.price | currency}}
     </div>
 
     <div>
-      <button class="remove-button" (click)="removeFromCart(cartItem)">
+      <button class="remove-button" >
         Remove
       </button>
     </div>
