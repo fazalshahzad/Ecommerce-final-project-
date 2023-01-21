@@ -30,4 +30,7 @@ return  this.http.post(`http://localhost:8686/ProductManagement/updateProductByI
 //   getProductByCompanyName(companyName:any){
 // return this.http.get(`http://localhost:8686/ProductManagement`)
 //   }
+addToCart(product: any) {
+  return this.createProductCart(product);
+  }
 }

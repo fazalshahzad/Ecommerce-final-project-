@@ -53,7 +53,15 @@ export class HomeComponent implements OnInit {
   reDirectSingleProductPage(_id: any) {
     this.Router.navigate(['View-Product', _id]);
   }
- 
+
+  
+
+  addToCart(_id:any) {
+
+
+    this.Router.navigate(['cart', _id])
+        
+    }
 
 
 }

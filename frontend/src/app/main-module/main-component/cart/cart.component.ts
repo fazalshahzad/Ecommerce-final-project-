@@ -16,12 +16,25 @@ import { CartItem } from 'src/app/shared-service/Model/cartitem';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  public selectedQuantity:Number | any = 0;
+  public stockQuantity:any;
+  public imageIndex = "ProductImageUrl"
+  public url = 'http://localhost:8686/'
+  public getProductsId: any;
+  public getAllDataWithOwnId: object | ProductInterface | any = {}
+  public getAllDatafromProductService: any
+  product:any;
  
   cartProducts: any[] = [];
   cart!: Cart;
 
 
-  constructor(private cartService: CartService) {
+  constructor(private cartService: CartService,
+    private ActivatedRoute: ActivatedRoute,
+    private readonly getAllProductFrombackend: ProductApiService,
+    private readonly Router:Router,
+    private getProductDatafromservice: ProductApiService,
+    ) {
 
     this.cartService.getCartObservable().subscribe((cart) => {
       this.cart = cart;
@@ -30,8 +43,27 @@ export class CartComponent implements OnInit {
    }
   
   ngOnInit() {
+    this.callingMyActivatedRoute()
+    this.getProductService()
+    this.getAllProduct()
   }
 
+
+  public callingMyActivatedRoute() {
+    this.getProductsId = this.ActivatedRoute.snapshot.params['Id']
+    console.log(this.getProductsId);
+  }
+
+  public getProductService() {
+    this.getAllProductFrombackend.getProductWithId(this.getProductsId).subscribe((response: any) => {
+      this.getAllDataWithOwnId = response.Result
+    })
+  }
+  public getAllProduct() {
+    this.getAllProductFrombackend.getProduct().subscribe((response: any) => {
+      this.getAllDatafromProductService = response.Result
+    })
+  }
   
   removeFromCart(cartItem:CartItem){
     this.cartService.removeFromCart(cartItem.product.id);
