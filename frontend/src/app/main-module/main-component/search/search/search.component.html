@@ -1,0 +1,5 @@
+<div class="search-container">
+    <i class="fa fa-search" (click)="search(s.value)"></i>
+    <input #s type="text" placeholder="Search..." (keyup.enter)="search(s.value)"
+    [value]="searchTerm">
+  </div>

@@ -19,6 +19,7 @@ import { HomeComponent } from './main-component/home/home.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { BlogComponent } from './main-component/blog/blog.component';
 import { CartComponent } from './main-component/cart/cart.component';
+import { SearchComponent } from './main-component/search/search/search.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { CartComponent } from './main-component/cart/cart.component';
     ViewProductComponent,
     BlogComponent,
     CartComponent,
+    SearchComponent,
    
   ],
   imports: [
